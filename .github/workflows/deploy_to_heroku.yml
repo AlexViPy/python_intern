@@ -22,6 +22,7 @@ jobs:
           pip install -r requirements.txt
       - name: Test with unittest
         run: |
+         export PYTHONPATH=src
          coverage run src/tests.py
       - name: Tests report
         run: coverage report
