@@ -11,5 +11,5 @@ def is_alive_host(hostname):
         response = requests.get(f"https://{hostname}")
         if 100 <= response.status_code <= 400:
             return True
-    except requests.exceptions.ConnectionError as err:
+    except requests.exceptions.ConnectionError:
             return False
