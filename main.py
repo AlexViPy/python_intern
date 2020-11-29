@@ -11,4 +11,4 @@ async def get_is_alive_host(hostname: str = Query(...)):
         
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='127.0.0.1', port='8001', reload=True)
+    uvicorn.run('main:app', host='127.0.0.1', port='8001', reload=True)
